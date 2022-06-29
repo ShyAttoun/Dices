@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Dicee_iOS13" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GreenBackground" translatesAutoresizingMaskIntoConstraints="NO" id="oov-p6-nwK">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="Z0I-rs-V1s">
+                                <rect key="frame" x="72" y="189" width="270" height="100"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="251" image="DiceFive" translatesAutoresizingMaskIntoConstraints="NO" id="PTN-HW-Hu7">
+                                        <rect key="frame" x="0.0" y="0.0" width="141" height="100"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DiceOne" translatesAutoresizingMaskIntoConstraints="NO" id="dEI-Wx-VRf">
+                                        <rect key="frame" x="170" y="0.0" width="100" height="100"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eSz-XP-eyt">
+                                <rect key="frame" x="174" y="714" width="66" height="31"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Roll">
+                                    <color key="baseForegroundColor" systemColor="tertiarySystemBackgroundColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="rollTheDices:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XED-dG-klA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="oov-p6-nwK" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="NcN-6t-QUR"/>
+                            <constraint firstItem="Z0I-rs-V1s" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="72" id="SHx-or-ZnY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eSz-XP-eyt" secondAttribute="bottom" constant="117" id="U5z-ND-Lrb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eSz-XP-eyt" secondAttribute="trailing" constant="174" id="amM-rU-hAx"/>
+                            <constraint firstItem="Z0I-rs-V1s" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="145" id="iKj-6U-T8W"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Z0I-rs-V1s" secondAttribute="trailing" constant="72" id="iP5-zD-bWh"/>
+                            <constraint firstAttribute="bottom" secondItem="oov-p6-nwK" secondAttribute="bottom" id="lbq-c6-4RI"/>
+                            <constraint firstItem="oov-p6-nwK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mgx-1X-sJx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oov-p6-nwK" secondAttribute="trailing" id="nsw-9Z-D3s"/>
+                            <constraint firstItem="eSz-XP-eyt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="174" id="sxL-b5-9Xc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="rollBtn" destination="eSz-XP-eyt" id="eKk-59-psK"/>
+                        <outletCollection property="dices" destination="PTN-HW-Hu7" collectionClass="NSMutableArray" id="SLT-y6-6tH"/>
+                        <outletCollection property="dices" destination="dEI-Wx-VRf" collectionClass="NSMutableArray" id="STo-U7-u2U"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="DiceFive" width="100" height="100"/>
+        <image name="DiceOne" width="100" height="100"/>
+        <image name="GreenBackground" width="444.5" height="414"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiarySystemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
